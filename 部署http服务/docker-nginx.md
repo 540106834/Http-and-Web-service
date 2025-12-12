@@ -84,9 +84,10 @@ docker run -d \
   --name my-nginx \
   -p 80:80 \
   -p 443:443 \
-  -v /opt/nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
-  -v /opt/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro \
-  -v /opt/nginx/certs:/etc/nginx/certs:ro \
+  -v /nginx/nginx.conf:/etc/nginx/nginx.conf:ro \
+  -v /nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro \
+  -v /nginx/certs/server/server.crt:/etc/nginx/certs/server.crt:ro \
+  -v /nginx/certs/server/server.key:/etc/nginx/certs/server.key:ro \
   nginx:1.24
 ```
 
