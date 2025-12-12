@@ -112,6 +112,7 @@ docker exec -it my-nginx nginx -t
 
 ```
 https://<你的服务器 IP>
+curl --cacert ca.crt https://example.com #自签证书访问
 ```
 
 如果是自签证书，浏览器会提示“不完全信任”，属于正常现象。
